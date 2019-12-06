@@ -4,22 +4,70 @@ window.onload = function(){
  
 }
 
+var ukupnaCenaTure=0;
+var simbolValute="&#8364;"
 
-let izabranoIme=document.querySelector("#ime").value;
-console.log(izabranoIme);
- let regName,regNumber;
+function provera(e){
+    e.preventDefault();
+    let izabranoIme=document.querySelector("#ime").value;
+    let izabranBroj=document.querySelector("#broj").value;
+    var regName,regNumber;
+    
+    regName=/^[A-ZŠĐČĆŽ]([a-zšđžčć\s]{2,12})*$/;
 
- regName=/^[A-ZŠĐČĆŽ]([a-zšđžčć\s]{2,12})*$/
  //Radi vezbe uslov je stavljen samo za pozivne brojeve u nasoj zemlji
-regNumber=/^\+3816[/d]{7,8} || 06[/d]{6,7}$/
-var uspesnaProvera=false;
-
-function provera(){
+    regNumber=/^06[0-9]{7,8}$/;
 
     if(regName.test(izabranoIme)){
         uspesnaProvera=true;
+        document.querySelector("#ime").classList.remove("greska");
+        
+    }
+    else{
+        document.querySelector("#ime").classList.add("greska");
+        
     }
 
+    if(regNumber.test(izabranBroj)){
+        uspesnaProvera=true;
+        document.querySelector("#broj").classList.remove("greska");
+        
+    }
+    else{
+        document.querySelector("#broj").classList.add("greska");
+        
+    }
+
+    var izborMesto=document.querySelector("#odaberiTuru").value;
+    if(izborMesto!="-1"){
+        uspesnaProvera=true;
+        document.querySelector("#odaberiTuru").classList.remove("greska");
+        
+    }
+    else{
+        document.querySelector("#odaberiTuru").classList.add("greska");
+    }
+    
+
+    var izborLjudi=document.querySelector("#noPeople").value;
+    if(izborLjudi!="0"){
+        uspesnaProvera=true;
+        document.querySelector("#noPeople").classList.remove("greska");
+        
+    }
+    else{
+        document.querySelector("#noPeople").classList.add("greska");
+    }
+
+    var datum=document.querySelector("#datum").value;
+    
+    
+
+
+    if(uspesnaProvera){
+        ukupnaCenaTure+=turaCena[izborMesto]*izborLjudi;
+        document.getElementById("cena").value=`${ukupnaCenaTure} \u20AC`
+    }
     
 }
 
@@ -47,7 +95,7 @@ for(let i=0;i<stavkeMenija.length;i++){
 " The square was previously named Dimitrije Tucović Square after the prominent Serbian socialist.",
 "Terazije is the central town square and the surrounding neighborhood of Belgrade, the capital of Serbia."];
 
-//Racunanje popusta
+
 
  for(let i=0;i<turaIme.length;i++){
      
@@ -81,14 +129,14 @@ for(let i=0;i<stavkeMenija.length;i++){
 
 //Ispis forme
 let selectTura=document.querySelector("#odaberiTuru");
-selectTura.innerHTML+="<option value='0'>Choose tour</option>";
+selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
     for(let i=0;i<turaIme.length;i++){
         
 
 
 
         selectTura.innerHTML+=`
-        <option value="${turaIme[i]}">${turaIme[i]}</option>
+        <option value="${i}">${turaIme[i]}</option>
         `
     }
 
@@ -130,12 +178,7 @@ selectTura.innerHTML+="<option value='0'>Choose tour</option>";
             1200);
     })
 
-    $("#bookNow").click(function(e){
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: $("#ture").offset().top},
-            1200);
-    })
+   
 
 
 
