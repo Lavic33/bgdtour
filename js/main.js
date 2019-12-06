@@ -11,7 +11,7 @@ window.onload = function(){
 
 
 var ukupnaCenaTure=0;
-var simbolValute="&#8364;"
+var simbolValute="&#8364;";
 
 function provera(e){
     e.preventDefault();
@@ -148,7 +148,7 @@ for(let i=0;i<stavkeMenija.length;i++){
      <button class="readmore stylebtn margina">Read more</button>
      <p class="opis margina">${turaOpis[i]}</p>
      <button class="book stylebtn margina   " >Book</button>
-     </div>`
+     </div>`;
  }
 
 //Ispis forme
@@ -161,7 +161,7 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
 
         selectTura.innerHTML+=`
         <option value="${i}">${turaIme[i]}</option>
-        `
+        `;
     }
 
 
@@ -177,14 +177,14 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
         else{
             $(".toTop").fadeOut();
         }
-    })
+    });
 
     $("#respmeni").click(function(e){
         e.preventDefault;
         $("#mobileMeni").slideToggle("slow",function(){
             
         });
-    })
+    });
 
 
 
@@ -197,14 +197,14 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
         $(this).next(".opis").fadeToggle(1000,function(){
            
         });
-    })
+    });
 
     $("#bookNow").click(function(e){
         e.preventDefault();
         $("html,body").animate({
             scrollTop: $("#ture").offset().top},
             1200);
-    })
+    });
 
 
     $("#Tours").click(function(e){
@@ -212,26 +212,26 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
         $("html,body").animate({
             scrollTop:$("#ture").offset().top
         },1200);
-    })
+    });
     $("#Toursresp").click(function(e){
         e.preventDefault();
         $("html,body").animate({
             scrollTop:$("#ture").offset().top
         },1200);
-    })
+    });
 
     $("#Book").click(function(e){
         e.preventDefault();
         $("html,body").animate({
             scrollTop:$("#forma").offset().top
         },1200);
-    })
+    });
     $("#Bookresp").click(function(e){
         e.preventDefault();
         $("html,body").animate({
             scrollTop:$("#forma").offset().top
         },1200);
-    })
+    });
 
     $("#Author").click(function(e){
         e.preventDefault();
@@ -244,7 +244,7 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
         $("html,body").animate({
             scrollTop:$("#autor").offset().top
         },1200);
-    })
+    });
 
 
     var ime="";
@@ -261,7 +261,7 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
             scrollTop:$("#forma").offset().top
         },1200);
 
-    })
+    });
 
     
   
@@ -274,7 +274,7 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
     $(".toTop").click(function(){
       
         $("html,body").animate({scrollTop:0},1000);
-    })
+    });
 
 
     $(".animacijaDveSlike").hover(function(){
@@ -283,7 +283,7 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
     },function(){
         $(this).find("img:eq(1)").fadeOut();
     }
-    )
+    );
 
   
     //Image animaton
@@ -292,7 +292,7 @@ selectTura.innerHTML+="<option value='-1'>Choose tour</option>";
         $(this).css({"border":"3px solid #7d5d3b","opacity":"1"});
     },function(){
         $(this).css({"border":"none","opacity":"0.75"});
-    })
+    });
 
    
 
