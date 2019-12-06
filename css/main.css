@@ -10,6 +10,9 @@ a{
     text-decoration:none;
     
 }
+#respmeni{
+    display: none;
+}
 .naslov{
     background-color: #c2c2c2;
     padding: 1%;
@@ -121,7 +124,7 @@ a{
 
  #ture{
      width:100%;
-    
+     
      display: flex;
      justify-content: space-around;
      flex-wrap: wrap;
@@ -227,3 +230,114 @@ footer a{
     color:#fff;
     font-size: 20px;
 }
+.responsive {
+    width: 100%;
+    height: auto;
+  }
+
+.burger{
+    font-size: 50px;
+    margin:40% 10% 0 0;
+}
+#mobileMeni{
+    display: none;
+    
+    padding: 10%;
+}
+#meniResp{
+    padding: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#meniResp ul li a{
+    padding-bottom: 5%;
+}
+
+@media only screen and (max-width: 981px){
+    #respmeni{
+        display: block;
+    }
+    #pcmeni{
+        display: none;
+    }
+    #logo h1{
+        font-size:25px;
+        text-align: center;
+    }
+    
+    .tura{
+        width: 40%;
+        padding-bottom: 15%;;
+    }
+    }
+    
+@media only screen and (max-width: 981px){
+
+    
+    .tura{
+        width:40%;
+        
+    }
+    }
+ @media only screen and (max-width: 944px){
+
+    
+        .tura{
+            width:40%;
+            padding-bottom: 20%;
+        }
+        }
+@media only screen and (max-width: 753px){
+
+
+    .tura{
+        width:50%;
+        padding-bottom: 20%;
+    }
+    }
+@media only screen and (max-width: 688px){
+
+
+    .tura{
+        width:50%;
+        padding-bottom: 25%;
+    }
+    }
+@media only screen and (max-width: 618px){
+
+    #backToTop i{
+        font-size:35px;
+    }
+    .tura{
+        width:50%;
+        padding-bottom: 35%;
+    }
+    }
+@media only screen and (max-width: 525px){
+
+
+    .tura{
+        width:50%;
+        padding-bottom: 45%;
+    }
+    }
+@media only screen and (max-width: 472px){
+
+
+    .tura{
+        width:50%;
+        padding-bottom: 55%;
+    }
+    }
+
+
+@media only screen and (max-width: 425px){
+
+
+    .tura{
+        width:50%;
+        padding-bottom: 65%;
+    }
+    }
