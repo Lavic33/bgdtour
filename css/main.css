@@ -43,6 +43,7 @@ a{
     position: fixed;
     bottom:20px;
     right:10px;
+    z-index: 99;
 }
 #backToTop i{
     font-size:45px;
@@ -163,12 +164,14 @@ input{
     font-size:15px;
     color:#7d5d3b;
     border-radius: 3%;
+    width:25%;
 }
 select{
     padding: 0.6% 1%;
     font-size:15px;
     color:#7d5d3b;
     border-radius: 3%;
+    width:33%;
 }
 form{
     width:100%;
@@ -237,7 +240,10 @@ footer a{
 
 .burger{
     font-size: 50px;
-    margin:40% 10% 0 0;
+    margin-right: 50px;
+    color:#634b30;
+    
+    
 }
 #mobileMeni{
     display: none;
@@ -251,10 +257,16 @@ footer a{
     justify-content: space-around;
     flex-direction: column;
 }
-#meniResp ul li a{
-    padding-bottom: 5%;
+#meniResp li {
+    margin-bottom: 10px;
 }
-
+#icons{
+    width: 100%;
+    text-align: center;
+}
+#icons a{
+    padding-right: 2%;
+}
 @media only screen and (max-width: 981px){
     #respmeni{
         display: block;
@@ -271,8 +283,34 @@ footer a{
         width: 40%;
         padding-bottom: 15%;;
     }
+    } #prvired{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+    #drugired{
+        width: 50%;
     }
     
+    @media only screen and (max-width: 1300px){
+        #prvired{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 5%;
+        }
+        #drugired{
+            width: 100%;
+        }
+        form{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        }
+
+
+
 @media only screen and (max-width: 981px){
 
     
@@ -299,14 +337,36 @@ footer a{
     }
 @media only screen and (max-width: 688px){
 
-
+    #promotxt h1{
+        font-size: 25px;
+        
+    }
+    #promotxt a{
+        font-size: 20px;
+    }
     .tura{
         width:50%;
         padding-bottom: 25%;
     }
     }
 @media only screen and (max-width: 618px){
-
+    #posalji{
+        width:50%;
+        
+    }
+    #drugired{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    input{
+        width:90%;
+        margin: 2% 0%;
+    }
+    select{
+        width:90%;
+        margin: 2% 0%;
+    }
     #backToTop i{
         font-size:35px;
     }
@@ -317,6 +377,12 @@ footer a{
     }
 @media only screen and (max-width: 525px){
 
+    footer h4{
+        font-size: 15px;
+    }
+    footer a{
+        font-size: 15px;
+    }
 
     .tura{
         width:50%;
@@ -324,8 +390,7 @@ footer a{
     }
     }
 @media only screen and (max-width: 472px){
-
-
+    
     .tura{
         width:50%;
         padding-bottom: 55%;

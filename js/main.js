@@ -72,17 +72,28 @@ function provera(e){
         
     }
   
-    // var datum=document.querySelector("#datum").value;
-    // var trenutniDatum=new Date();
-    // console.log(datum);
-    // console.log(trenutniDatum.getDate())
-    // if(datum<trenutniDatum.getDate()){
-    //     uspesnaProvera=true;
-    //     document.querySelector("#noPeople").classList.remove("greska");
-    // }
-    // else{
-    //     document.querySelector("#noPeople").classList.add("greska");
-    // }
+    var datum=document.querySelector("#datum").value;
+    var trenutniDatum=new Date();
+    var trenutniDan=trenutniDatum.getDate();
+    var trenutniMesec=trenutniDatum.getMonth();
+    var trenutnaGodina=trenutniDatum.getFullYear();
+    console.log(datum);
+
+   var deodatuma=datum.split("-");
+   
+   if((deodatuma[0]<trenutnaGodina) || (deodatuma[1]<trenutniMesec) || (deodatuma[2]<trenutniDan)){
+    document.querySelector("#noPeople").classList.add("greska");
+   }
+   else{
+    uspesnaProvera=true;
+    document.querySelector("#noPeople").classList.remove("greska");
+   }
+    
+
+    
+
+    
+
 
     
     
