@@ -118,17 +118,20 @@ for(let i=0;i<stavkeMenija.length;i++){
 
 
 //Ispis tura
- var turaIme=["Kalemegdan","Skadarlija","NightLife","Usce","Slavija","Terazije"];
- var turaTrajanje=[1,2.5,3,1,0.5,1];
- var turaCena=[10,20,25,5,6,4];
- var turaRejting=[4,5,4.4,4.3,3.8,4.8];
- var turaPopust=[10,33,50,40,50,20];
+ var turaIme=["Kalemegdan","Skadarlija","NightLife","Usce","Slavija","Terazije","Savski Kej","Knez Mihajlova","Hram Svetog Save"];
+ var turaTrajanje=[1,2.5,3,1,0.5,1,2,3,4];
+ var turaCena=[10,20,25,5,6,4,7,15,50];
+ 
+ var turaPopust=[10,33,50,40,50,20,15,30,50];
  var turaOpis=["Kalemegdan is the largest park and the most important historical monument in Belgrade.",
  "Skadarlija  is a vintage street, an urban neighborhood and former municipality of Belgrade, the capital of Serbia.",
 "Belgrade is city that never sleeps,explore restaurants and popular clubs",
 "Usce means confluence,its large beautifull park by the two rivers Sava and Danube",
 " The square was previously named Dimitrije Tucović Square after the prominent Serbian socialist.",
-"Terazije is the central town square and the surrounding neighborhood of Belgrade, the capital of Serbia."];
+"Terazije is the central town square and the surrounding neighborhood of Belgrade, the capital of Serbia.",
+"Savski kej is beautifull landscape by the river Sava in part of city-New Belgrade",
+"Knez Mihailova Street is the main pedestrian and shopping zone in Belgrade",
+"The Church of Saint Sava is a Serbian Orthodox church located on the Vračar plateau in Belgrade, Serbia."];
 
 
 
@@ -152,7 +155,7 @@ for(let i=0;i<stavkeMenija.length;i++){
 
      ture.innerHTML+=`<div id="${turaIme[i]}" class="tura">
      <h2 class="naslovTure margina">${turaIme[i]}</h2>
-     <img src="img/${turaIme[i]}.jpg" alt="${turaIme[i]}" class="Slika margina"/>
+     <img src="img/${i}.jpg" alt="${turaIme[i]}" class="Slika margina"/>
      <p class="margina">Trajanje ture: ${turaTrajanje[i]}h</p>
      <p class="staraCena">${staraCena}&#8364;</p>
      <p class="cena margina">${turaCena[i]} &#8364;</p>
