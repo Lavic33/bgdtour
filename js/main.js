@@ -131,7 +131,7 @@ for(let i=0;i<stavkeMenija.length;i++){
 "Terazije is the central town square and the surrounding neighborhood of Belgrade, the capital of Serbia.",
 "Savski kej is beautifull landscape by the river Sava in part of city-New Belgrade",
 "Knez Mihailova Street is the main pedestrian and shopping zone in Belgrade",
-"The Church of Saint Sava is a Serbian Orthodox church located on the Vračar plateau in Belgrade, Serbia."];
+"The Church of Saint Sava is a Serbian Orthodox church"];
 
 
 
